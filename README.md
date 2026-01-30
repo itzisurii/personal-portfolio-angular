@@ -30,5 +30,3 @@ The main goal of this project is to present my work in a clean, professional, an
 
 ---
 
-## 📂 Project Structure (Overview)
-
