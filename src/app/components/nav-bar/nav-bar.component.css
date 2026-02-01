@@ -1,0 +1,76 @@
+.custom-nav {
+  background-color: #f8f8f8; 
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+
+  .navbar-brand {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.03em; /* Tighter spacing for a modern look */
+    color: #1a1a1a;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .nav-link {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #555;
+    letter-spacing: 0.02em;
+    position: relative;
+    padding: 0.5rem 0;
+
+    &:hover, &.active {
+      color: #000;
+    }
+
+    /* // Subtle underline effect for active/hover */
+    &.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #000;
+    }
+  }
+
+  .menu-icon {
+    width: 28px;
+    height: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+
+    span {
+      display: block;
+      height: 1.5px;
+      background-color: #000;
+      transition: width 0.3s ease;
+    }
+
+    .bar-top { width: 100%; }
+    .bar-bottom { width: 70%; align-self: flex-end; }
+
+    &:hover .bar-bottom {
+      width: 100%;
+    }
+  }
+}
+
+/* // Mobile Slide-in Menu Style */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 20px;
+    margin-top: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    text-align: center;
+  }
+}
