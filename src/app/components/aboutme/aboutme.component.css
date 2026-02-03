@@ -1,0 +1,52 @@
+.about-section {
+  background-color: #fff;
+  
+  .section-label {
+    .line {
+      display: inline-block;
+      width: 40px;
+      height: 2px;
+      background-color: #ff5e3a; /* Accent color from your home page */
+    }
+  }
+
+  .about-title {
+    color: #1a1a1a;
+    letter-spacing: -0.02em;
+  }
+
+  .lead-custom {
+    max-width: 600px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+}
+
+.skill-card {
+  background-color: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 24px; /* Rounded like the reference */
+  transition: all 0.3s ease;
+  cursor: default;
+
+  &:hover {
+    border-color: #1a1a1a;
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  }
+
+  h4 {
+    font-size: 1.4rem;
+    color: #1a1a1a;
+  }
+
+  .icon-accent {
+    color: #ff5e3a;
+  }
+
+  .index-number {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #ccc;
+  }
+}
