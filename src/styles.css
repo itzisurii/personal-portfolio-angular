@@ -48,20 +48,20 @@ html {
 
 .btn-hire {
   /* A gradient from your signature orange to a slightly softer peach */
-  background: linear-gradient(135deg, #04052b 0%, #7085ff 100%);
+  background: linear-gradient(135deg, #e76531 0%, #cc8e76de 100%);
   color: white !important;
   font-weight: 600;
   padding: 12px 30px;
   border: none;
   border-radius: 12px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(112, 133, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(173, 78, 15, 0.3);
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .btn-hire:hover {
   transform: translateY(-2px); /* Subtle lift on hover */
-  box-shadow: 0 8px 25px rgba(58, 94, 255, 0.384);
+  box-shadow: 0 8px 25px rgba(194, 81, 16, 0.842);
   filter: brightness(1.1);
 }
 
