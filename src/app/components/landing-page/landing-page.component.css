@@ -1,64 +1,26 @@
 .home-section {
-  min-height: 90vh;
-  background-color: #fff; /* Keeping it clean like the reference */
-  padding-top: 80px; /* Space for your fixed navbar */
+  min-height: 100vh;
+  padding-top: 100px; /* Space for navbar */
+  padding-bottom: 50px;
+  overflow-x: hidden; /* Prevents the shape-bg from causing horizontal scroll */
 }
 
-.greeting {
-  color: #6c757d;
-  font-size: 1.1rem;
-  letter-spacing: 0.05em;
-}
-
-.main-title {
-  color: #1a1a1a;
-  line-height: 1.2;
-  
-  .text-highlight {
-    color: #333;
-    position: relative;
-    display: inline-block;
-
-    &::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 8px;
-      width: 100%;
-      height: 4px;
-      background-color: #ff5e3a; /* The orange accent from the image */
-      z-index: -1;
-    }
-  }
-}
-
-.btn-hire {
-  background-color: #1a1a1a;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: transform 0.2s;
-
-  &:hover {
-    transform: translateY(-3px);
-    background-color: #000;
-  }
-}
-
-/* Image with Rounded Background Shape */
 .image-wrapper {
   position: relative;
   width: 100%;
-  max-width: 450px;
+  max-width: 400px; /* Slightly smaller for better mobile fit */
+  margin: 0 auto;   /* Centers the image wrapper on mobile */
 
   .shape-bg {
     position: absolute;
-    top: 10%;
-    right: 0;
-    width: 90%;
-    height: 90%;
-    background-color: #fcf6eb; /* The soft cream color from image */
+    top: 5%;
+    right: -5%;
+    width: 100%;
+    height: 100%;
+    background-color: #fcf6eb; 
     border-radius: 40px;
     z-index: 1;
+    transition: all 0.3s ease;
   }
 
   .profile-img {
@@ -67,20 +29,23 @@
     width: 100%;
     height: auto;
     display: block;
-    /* Optional: If your photo has a background, this makes it look like the reference */
     border-radius: 40px; 
     object-fit: cover;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
   }
 }
 
-/* Responsive tweaks */
+/*/ Mobile-specific tweaks*/
 @media (max-width: 991px) {
-  .home-section {
-    text-align: center;
-    padding-bottom: 50px;
+  .main-title {
+    font-size: calc(1.5rem + 3vw); /* Fluid typography */
   }
   
-  .text-highlight::after {
-    bottom: 4px;
+  .image-wrapper {
+    max-width: 300px; /* Scale down the image for small screens */
+    
+    .shape-bg {
+      right: -3%; /* Tighter fit for mobile */
+    }
   }
 }
