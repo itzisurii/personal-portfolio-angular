@@ -1,0 +1,73 @@
+.contact-section {
+  /* This gradient now covers the whole bottom of the page */
+  background: linear-gradient(145deg, #1a2238 0%, #252e4a 100%);
+  color: #ffffff;
+  padding: 120px 0 0 0; /* Padding-bottom removed to let footer sit flush */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add a subtle glow effect behind the email */
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 94, 58, 0.05) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* Ensure the "Get in Touch" label stands out */
+.contact-section .section-label .text-muted {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.contact-section h2 {
+  color: #ffffff;
+}
+
+/* Email Link Styling */
+.email-link {
+  color: #ffffff;
+  transition: color 0.3s ease;
+  word-break: break-word;
+  text-decoration: none;
+}
+
+.email-link:hover {
+  color: var(--accent-orange);
+}
+
+/* Social Icons - Must be light to see them on Navy! */
+.social-links .social-icon {
+  font-size: 1.5rem;
+  color: #ffffff; 
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+.social-links .social-icon:hover {
+  color: var(--accent-orange);
+  transform: translateY(-5px);
+}
+
+/* Updated Footer to be transparent */
+footer {
+  background-color: transparent !important; /* Removes the solid navy block */
+  border-top: 1px solid rgba(255, 255, 255, 0.1); 
+  padding: 40px 0;
+  margin-top: 60px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+footer a {
+  color: rgba(255, 255, 255, 0.5) !important;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ffffff !important;
+}
