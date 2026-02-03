@@ -41,6 +41,21 @@
   color: var(--accent-orange);
 }
 
+.social-icon {
+  font-size: 1.5rem;
+  /* Use a bright off-white to contrast with the navy */
+  color: rgba(255, 255, 255, 0.8) !important; 
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), color 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  /* This turns them orange on hover, matching your "Works" line */
+  color: var(--accent-orange) !important;
+  transform: translateY(-5px);
+}
+
 /* Social Icons - Must be light to see them on Navy! */
 .social-links .social-icon {
   font-size: 1.5rem;
@@ -70,4 +85,18 @@ footer a {
 
 footer a:hover {
   color: #ffffff !important;
+}
+
+/* This targets the copyright text specifically */
+footer p.mb-0 {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* This ensures the Privacy/Terms links are also visible */
+.footer-links a.text-muted {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.footer-links a:hover {
+    color: var(--accent-orange) !important;
 }
