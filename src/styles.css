@@ -1,1 +1,78 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --deep-navy: #1a2238;
+  --accent-orange: #ff5e3a;
+  --soft-white: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth !important;
+  scroll-padding-top: 150px;
+}
+
+@media (min-width: 992px) {
+  html { scroll-padding-top: 120px; }
+}
+
+.nav-spacer { height: 100px; }
+
+@media (min-width: 992px) {
+  .nav-spacer { height: 120px; }
+}
+
+/* 1. Shared Label Style */
+.section-label .line {
+  display: inline-block;
+  width: 40px;
+  height: 2px;
+  background-color: var(--accent-orange);
+}
+
+/* 2. Light Sections (About & Projects only) */
+#about, #projects {
+  background: radial-gradient(
+    circle at top left, 
+    rgba(255, 255, 255, 1) 0%, 
+    rgba(243, 244, 246, 1) 100%
+  );
+  border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+
+/* 3. Dark Section (Contact) */
+#contact {
+  background-color: var(--deep-navy) !important;
+  color: white;
+}
+
+/* 4. Global UI Elements */
+.btn-hire {
+  background: linear-gradient(135deg, #ff5e3a 0%, #ff8c70 100%);
+  border: none;
+  box-shadow: 0 4px 15px rgba(255, 94, 58, 0.3);
+  color: white;
+  transition: transform 0.2s ease;
+}
+
+.btn-hire:hover {
+  transform: translateY(-2px);
+  color: white;
+}
+
+/* Footer text visibility on Dark Navy */
+footer p.mb-0 {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7) !important;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent-orange) !important;
+}
+
+/* Ensure the horizontal line is visible but subtle */
+hr.opacity-10 {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    opacity: 1;
+}
