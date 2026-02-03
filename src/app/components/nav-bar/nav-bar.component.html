@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg fixed-top custom-nav">
+  <div class="container-fluid px-4 px-md-5 py-3">
+    <a class="navbar-brand fw-bold" (click)="goToSection('home')" style="cursor: pointer;">
+      Isurika Sathsarani
+    </a>
+
+    <button class="navbar-toggler border-0 shadow-none" type="button" 
+            data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false">
+      <div class="menu-icon">
+        <span class="bar-top"></span>
+        <span class="bar-bottom"></span>
+      </div>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end pe-lg-5" id="navbarNav">
+      <ul class="navbar-nav gap-lg-5 py-4 py-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="activeSection === 'home'" (click)="goToSection('home')">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="activeSection === 'about'" (click)="goToSection('about')">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="activeSection === 'projects'" (click)="goToSection('projects')">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="activeSection === 'contact'" (click)="goToSection('contact')">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,67 @@
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+:root {
+  --deep-navy: #1a2238;
+  --accent-orange: #ff5e3a;
+  --soft-white: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth !important;
+  scroll-padding-top: 150px;
+}
+
+@media (min-width: 992px) {
+  html { scroll-padding-top: 120px; }
+}
+
+.nav-spacer { height: 100px; }
+
+@media (min-width: 992px) {
+  .nav-spacer { height: 120px; }
+}
+
+/* 1. Shared Label Style */
+.section-label .line {
+  display: inline-block;
+  width: 40px;
+  height: 2px;
+  background-color: var(--accent-orange);
+}
+
+/* 2. Light Sections (About & Projects only) */
+#about, #projects {
+  background: radial-gradient(
+    circle at top left, 
+    rgba(255, 255, 255, 1) 0%, 
+    rgba(243, 244, 246, 1) 100%
+  );
+  border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+
+/* 3. Dark Section (Contact) */
+#contact {
+  background-color: var(--deep-navy) !important;
+  color: white;
+}
+
+
+.btn-hire {
+  /* A gradient from your signature orange to a slightly softer peach */
+  background: linear-gradient(135deg, #e76531 0%, #cc8e76de 100%);
+  color: white !important;
+  font-weight: 600;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(173, 78, 15, 0.3);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.btn-hire:hover {
+  transform: translateY(-2px); /* Subtle lift on hover */
+  box-shadow: 0 8px 25px rgba(194, 81, 16, 0.842);
+  filter: brightness(1.1);
+}
+

@@ -1,0 +1,51 @@
+.home-section {
+  min-height: 100vh;
+  padding-top: 100px; /* Space for navbar */
+  padding-bottom: 50px;
+  overflow-x: hidden; /* Prevents the shape-bg from causing horizontal scroll */
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* Slightly smaller for better mobile fit */
+  margin: 0 auto;   /* Centers the image wrapper on mobile */
+
+  .shape-bg {
+    position: absolute;
+    top: 5%;
+    right: -5%;
+    width: 100%;
+    height: 100%;
+    background-color: #fcf6eb; 
+    border-radius: 40px;
+    z-index: 1;
+    transition: all 0.3s ease;
+  }
+
+  .profile-img {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 40px; 
+    object-fit: cover;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
+  }
+}
+
+/*/ Mobile-specific tweaks*/
+@media (max-width: 991px) {
+  .main-title {
+    font-size: calc(1.5rem + 3vw); /* Fluid typography */
+  }
+  
+  .image-wrapper {
+    max-width: 300px; /* Scale down the image for small screens */
+    
+    .shape-bg {
+      right: -3%; /* Tighter fit for mobile */
+    }
+  }
+}
