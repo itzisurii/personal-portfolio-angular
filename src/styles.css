@@ -1,3 +1,5 @@
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
 :root {
   --deep-navy: #1a2238;
   --accent-orange: #ff5e3a;
@@ -43,36 +45,23 @@ html {
   color: white;
 }
 
-/* 4. Global UI Elements */
+
 .btn-hire {
-  background: linear-gradient(135deg, #ff5e3a 0%, #ff8c70 100%);
+  /* A gradient from your signature orange to a slightly softer peach */
+  background: linear-gradient(135deg, #04052b 0%, #7085ff 100%);
+  color: white !important;
+  font-weight: 600;
+  padding: 12px 30px;
   border: none;
-  box-shadow: 0 4px 15px rgba(255, 94, 58, 0.3);
-  color: white;
-  transition: transform 0.2s ease;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(112, 133, 255, 0.3);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .btn-hire:hover {
-  transform: translateY(-2px);
-  color: white;
+  transform: translateY(-2px); /* Subtle lift on hover */
+  box-shadow: 0 8px 25px rgba(58, 94, 255, 0.384);
+  filter: brightness(1.1);
 }
 
-/* Footer text visibility on Dark Navy */
-footer p.mb-0 {
-    color: rgba(255, 255, 255, 0.7) !important;
-}
-
-.footer-links a {
-    color: rgba(255, 255, 255, 0.7) !important;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: var(--accent-orange) !important;
-}
-
-/* Ensure the horizontal line is visible but subtle */
-hr.opacity-10 {
-    border-color: rgba(255, 255, 255, 0.1) !important;
-    opacity: 1;
-}
