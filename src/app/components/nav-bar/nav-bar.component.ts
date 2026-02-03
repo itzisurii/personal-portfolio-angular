@@ -1,6 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
-import { CommonModule } from '@angular/common'; // Required for [class.active]
+import { CommonModule } from '@angular/common'; 
 
 @Component({
   selector: 'app-nav-bar',
